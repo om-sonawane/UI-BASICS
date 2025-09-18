@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tulsi Wellness Edge</title>
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f6f0e8;
+            color: #222222;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+        }
+        .image-wrapper {
+            flex: 1 1 320px;
+            max-width: 480px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-wrapper img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border: 6px solid #f6f0e8;
+            transition: transform 0.3s ease;
+        }
+        .image-wrapper img:hover,
+        .image-wrapper img:focus {
+            transform: scale(1.05);
+            outline: none;
+        }
+        .content-wrapper {
+            flex: 1 1 480px;
+            max-width: 600px;
+        }
+        .title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .feature-icon {
+            flex-shrink: 0;
+            background-color: #4a8735;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 2px 6px rgba(74,135,53,.5);
+        }
+        .feature-text {
+            max-width: calc(100% - 72px);
+        }
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin: 0 0 8px 0;
+        }
+        .feature-desc {
+            font-size: 0.95rem;
+            margin: 0;
+            color: #222222;
+        }
+        .btn-shop {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 14px 36px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 32px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-shop:hover,
+        .btn-shop:focus {
+            background-color: #4a8735;
+            outline: none;
+        }
+        /* Icons using inline SVG as background */
+        /* Using embedded SVG for icons for best scalability */
+        .icon-medical svg,
+        .icon-stress svg,
+        .icon-stomach svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content-wrapper, .image-wrapper {
+                max-width: 100%;
+                flex: none;
+                width: 100%;
+                text-align: center;
+            }
+            .feature {
+                justify-content: center;
+                text-align: left;
+            }
+            .feature-text {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container" role="main">
+        <section class="image-wrapper" aria-label="Tulsi Plant Close Up Photo">
+            <img 
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f1ec747a-1953-4fbe-9a91-e29d01d97a1f.png"
+                alt="Close-up of tall tulsi plant stems with green leaves and tiny pink flowers in a natural garden setting during golden hour light, soft bokeh background"
+                loading="lazy" />
+        </section>
+        <section class="content-wrapper" aria-labelledby="wellness-heading">
+            <h1 class="title" id="wellness-heading">GET THE TULSI WELLNESS EDGE</h1>
+
+            <article class="feature">
+                <div class="feature-icon icon-medical" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                        <path d="M32 2a6 6 0 0 1 6 6v14h14a6 6 0 0 1 0 12H38v14a6 6 0 0 1-12 0V34H12a6 6 0 0 1 0-12h14V8a6 6 0 0 1 6-6z"/>
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h2 class="feature-title">GUARD AGAINST COUGH, COLD & POLLUTION</h2>
+                    <p class="feature-desc">
+                        Tulsi is long known to have anti-inflammatory, anti-bacterial, and anti-viral properties that help fight infections, hasten the healing of wounds and increase immunity against cough and cold.
+                    </p>
+                </div>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon icon-stress" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                        <path d="M32 10a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0-8a18 18 0 0 0-12 30v12h24V32A18 18 0 0 0 32 2z"/>
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h2 class="feature-title">FIGHT STRESS</h2>
+                    <p class="feature-desc">
+                        Tulsi is a powerful adaptogen that helps your body ward off the ill effects of physical and mental stress. It helps lower cortisol levels, relaxes your nervous system, and boosts cognitive function.
+                    </p>
+                </div>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon icon-stomach" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                        <path d="M20 50c0-8 8-11 8-18s-8-6-8-12c0-5 8-4 12-4" />
+                        <path d="M44 34c-4 0-6 1-8 4-2 2-4 4-4 8 0 5 13 4 13 4"/>
+                    </svg>
+                </div>
+                <div class="feature-text">
+                    <h2 class="feature-title">SUPPORT METABOLISM</h2>
+                    <p class="feature-desc">
+                        Tulsi is packed with antioxidants that enhance liver health, reduce acid reflux, and boost digestive system function.
+                    </p>
+                </div>
+            </article>
+
+            <button class="btn-shop" type="button" aria-label="Shop Now Button">SHOP NOW</button>
+        </section>
+    </main>
+</body>
+</html>

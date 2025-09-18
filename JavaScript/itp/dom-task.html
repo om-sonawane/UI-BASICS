@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1 class="name">om sonawane</h1>
+
+<div>
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam optio expedita ipsam officiis cum omnis voluptatem ratione et quod, vel assumenda, sequi praesentium quisquam explicabo!</p>
+</div>
+    <script>
+            //tasks:set and get Your Name using innerHtml and InnerText
+         
+            const nameElement = document.querySelector('.name');
+            nameElement.innerHTML = 'Om Sonawane';
+            nameElement.innerText = 'Om Sonawane';
+            nameElement.textContent = 'Om Sonawane';
+
+            //use textcontent and change the paragraph
+            const paraElement = document.querySelector('.para');
+            paraElement.textContent = 'This is the updated paragraph content using textContent.';
+        
+            //use all methods and acces the paragaraphs and just try to color to that paragraph
+            paraElement.innerHTML = '<span style="color:blue;">This is the updated paragraph content using innerHTML.</span>';
+            paraElement.innerText = 'This is the updated paragraph content using innerText.';
+            paraElement.style.color = 'green';
+
+
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>

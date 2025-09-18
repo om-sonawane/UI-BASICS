@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loops Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #8ec9e8;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      background: #fedd04;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #030000;
+    }
+    pre {
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 15px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Loop Programs</h2>
+
+  <button onclick="task1()">1) 1 to 10</button>
+  <button onclick="task2()">2) 100 to 200</button>
+  <button onclick="task3()">3) 100 to 1</button>
+  <button onclick="task4()">4) Even 50 to 10</button>
+  <button onclick="task5()">5) Sum 10 to 100</button>
+  <button onclick="task6()">6) Sum 59 to 100</button>
+  <button onclick="task7()">7) Even 1 to 20</button>
+  <button onclick="task8()">8) Table of 5</button>
+  <button onclick="task9()">9) Sum 1 to n</button>
+
+  <pre id="output">Click a button to see result...</pre>
+
+  <script>
+    function show(result) {
+      document.getElementById("output").textContent = result;
+    }
+
+    // 1) Print numbers 1 to 10
+    function task1() {
+      let res = "For loop:\n";
+      for (let i = 1; i <= 10; i++) res += i + " ";
+      res += "\n\nWhile loop:\n";
+      let i = 1;
+      while (i <= 10) { res += i + " "; i++; }
+      res += "\n\nDo...while loop:\n";
+      i = 1;
+      do { res += i + " "; i++; } while (i <= 10);
+      show(res);
+    }
+
+    // 2) 100 to 200
+    function task2() {
+      let res = "For loop:\n";
+      for (let j = 100; j <= 200; j++) res += j + " ";
+      res += "\n\nWhile loop:\n";
+      let j = 100;
+      while (j <= 200) { res += j + " "; j++; }
+      res += "\n\nDo...while loop:\n";
+      j = 100;
+      do { res += j + " "; j++; } while (j <= 200);
+      show(res);
+    }
+
+    // 3) 100 to 1
+    function task3() {
+      let res = "For loop:\n";
+      for (let k = 100; k >= 1; k--) res += k + " ";
+      res += "\n\nWhile loop:\n";
+      let k = 100;
+      while (k >= 1) { res += k + " "; k--; }
+      res += "\n\nDo...while loop:\n";
+      k = 100;
+      do { res += k + " "; k--; } while (k >= 1);
+      show(res);
+    }
+
+    // 4) Even 50 to 10
+    function task4() {
+      let res = "For loop:\n";
+      for (let m = 50; m >= 10; m--) if (m % 2 === 0) res += m + " ";
+      res += "\n\nWhile loop:\n";
+      let m = 50;
+      while (m >= 10) { if (m % 2 === 0) res += m + " "; m--; }
+      res += "\n\nDo...while loop:\n";
+      m = 50;
+      do { if (m % 2 === 0) res += m + " "; m--; } while (m >= 10);
+      show(res);
+    }
+
+    // 5) Sum 10 to 100
+    function task5() {
+      let res = "";
+      let sum = 0;
+      for (let n = 10; n <= 100; n++) sum += n;
+      res += "For loop Sum = " + sum + "\n";
+
+      sum = 0; let n = 10;
+      while (n <= 100) { sum += n; n++; }
+      res += "While loop Sum = " + sum + "\n";
+
+      sum = 0; n = 10;
+      do { sum += n; n++; } while (n <= 100);
+      res += "Do...while loop Sum = " + sum;
+      show(res);
+    }
+
+    // 6) Sum 59 to 100
+    function task6() {
+      let res = "";
+      let sum = 0;
+      for (let p = 59; p <= 100; p++) sum += p;
+      res += "For loop Sum = " + sum + "\n";
+
+      sum = 0; let p = 59;
+      while (p <= 100) { sum += p; p++; }
+      res += "While loop Sum = " + sum + "\n";
+
+      sum = 0; p = 59;
+      do { sum += p; p++; } while (p <= 100);
+      res += "Do...while loop Sum = " + sum;
+      show(res);
+    }
+
+    // 7) Even 1 to 20
+    function task7() {
+      let res = "For loop:\n";
+      for (let q = 1; q <= 20; q++) if (q % 2 === 0) res += q + " ";
+      res += "\n\nWhile loop:\n";
+      let q = 1;
+      while (q <= 20) { if (q % 2 === 0) res += q + " "; q++; }
+      res += "\n\nDo...while loop:\n";
+      q = 1;
+      do { if (q % 2 === 0) res += q + " "; q++; } while (q <= 20);
+      show(res);
+    }
+
+    // 8) Multiplication table of 5
+    function task8() {
+      let num = 5, res = "For loop:\n";
+      for (let r = 1; r <= 10; r++) res += `${num} x ${r} = ${num * r}\n`;
+      res += "\nWhile loop:\n";
+      let r = 1;
+      while (r <= 10) { res += `${num} x ${r} = ${num * r}\n`; r++; }
+      res += "\nDo...while loop:\n";
+      r = 1;
+      do { res += `${num} x ${r} = ${num * r}\n`; r++; } while (r <= 10);
+      show(res);
+    }
+
+    // 9) Sum 1 to n (input)
+    function task9() {
+      let nValue = parseInt(prompt("Enter value of n:"));
+      let res = "", sum = 0;
+      for (let s = 1; s <= nValue; s++) sum += s;
+      res += "For loop Sum = " + sum + "\n";
+
+      sum = 0; let s = 1;
+      while (s <= nValue) { sum += s; s++; }
+      res += "While loop Sum = " + sum + "\n";
+
+      sum = 0; s = 1;
+      do { sum += s; s++; } while (s <= nValue);
+      res += "Do...while loop Sum = " + sum;
+      show(res);
+    }
+  </script>
+
+</body>
+</html>

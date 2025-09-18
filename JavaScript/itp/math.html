@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating Captcha</title>
+</head>
+<body>
+    <script>
+        // generate captcha with some alphabets or numbers (EX: 1XePD6 );
+        function generateCaptcha(length = 6) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                captcha += characters[randomIndex];
+            }
+            return captcha;
+        }
+        math.random();
+        math.floor(4.7); 
+        math.ceil(4.3);
+        math.round(4.5); 
+    </script>
+    <button onclick="alert(generateCaptcha())">Generate Captcha</button>
+    
+</body>
+</html>

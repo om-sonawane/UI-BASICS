@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>overlapping</title>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 500px;
+      height: 400px;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      border: 2px solid black;
+    }
+
+ 
+    .red {
+      background-color: red;
+      top: 0px;
+      left: 200px;
+      z-index: 5;
+    }
+
+ 
+    .green-left {
+      background-color: green;
+      top: 80px;
+      left: 120px;
+      z-index: 4;
+    }
+
+    .green-right {
+      background-color: green;
+      top: 80px;
+      left: 280px;
+      z-index: 4;
+    }
+
+
+    .purple-left {
+      background-color: purple;
+      top: 160px;
+      left: 60px;
+      z-index: 3;
+    }
+
+    .purple-right {
+      background-color: purple;
+      top: 160px;
+      left: 340px;
+      z-index: 3;
+    }
+
+  
+    .blue-left {
+      background-color: deepskyblue;
+      top: 240px;
+      left: 0px;
+      z-index: 2;
+    }
+
+    .blue-right {
+      background-color: deepskyblue;
+      top: 240px;
+      left: 400px;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="square red"></div>
+    <div class="square green-left"></div>
+    <div class="square green-right"></div>
+    <div class="square purple-left"></div>
+    <div class="square purple-right"></div>
+    <div class="square blue-left"></div>
+    <div class="square blue-right"></div>
+  </div>
+</body>
+</html>

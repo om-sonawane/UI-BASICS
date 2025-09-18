@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Input Types Form</title>
+</head>
+<body>
+
+  <h2>Input Form</h2>
+
+  <form action="/submit-form" method="post" enctype="multipart/form-data">
+    
+    <!-- Text input -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+    <hr>
+
+    <!-- Email input -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+      <hr>
+    <!-- Password input -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+<hr>
+    <!-- Number input -->
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="0" max="100"><br><br>
+<hr>
+    <!-- Date input -->
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br><br>
+<hr>
+    <!-- Time input -->
+    <label for="time">Preferred Time:</label><br>
+    <input type="time" id="time" name="time"><br><br>
+<hr>
+    <!-- Radio buttons -->
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="male" required> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other<br><br>
+<hr>
+    <!-- Checkboxes -->
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobbies" value="reading"> Reading<br>
+    <input type="checkbox" name="hobbies" value="traveling"> Traveling<br>
+    <input type="checkbox" name="hobbies" value="sports"> Sports<br><br>
+<hr>
+    <!-- Dropdown / Select -->
+    <label for="country">Select Country:</label><br>
+    <select id="country" name="country">
+      <option value="">--Select--</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br><br>
+<hr>
+    <!-- Textarea -->
+    <label for="about">About Yourself:</label><br>
+    <textarea id="about" name="about" rows="4" cols="40"></textarea><br><br>
+<hr>
+    <!-- File input -->
+    <label for="resume">Upload Resume:</label><br>
+    <input type="file" id="resume" name="resume"><br><br>
+<hr>
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+<hr>
+  </form>
+
+</body>
+</html>

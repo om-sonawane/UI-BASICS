@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All CSS Pseudo Classes, Pseudo Elements & Units</title>
+  <style>
+    /* :root for CSS Variables */
+    :root {
+      --main-color: #4CAF50;
+      --font-size: 18px;
+      --padding-unit: 1em;
+    }
+
+    body {
+      font-size: var(--font-size);
+      padding: var(--padding-unit);
+    }
+
+    /* CSS Units Examples */
+    .units-example {
+      border: 2px dashed var(--main-color);
+      padding: 10px;          /* px */
+      margin: 2em;            /* em */
+      width: 50%;             /* % */
+      height: 10vh;           /* vh */
+      font-size: 1.5rem;      /* rem */
+    }
+
+    /* Pseudo Classes */
+
+    input:focus {
+      border: 2px solid green;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    div p:first-child {
+      color: green;
+    }
+
+    div p:last-child {
+      color: blue;
+    }
+
+    ul li:nth-child(odd) {
+      background-color: lightgray;
+    }
+
+    ul li:nth-child(even) {
+      background-color: lightblue;
+    }
+
+    ul li:nth-child(3) {
+      color: red;
+    }
+
+    p:empty {
+      border: 1px dashed red;
+      height: 20px;
+    }
+
+    input:disabled {
+      background-color: #ccc;
+    }
+
+    input:checked + label {
+      color: green;
+    }
+
+    p:not(.skip) {
+      color: orange;
+    }
+
+    #section:target {
+      background-color: lightgreen;
+      padding: 5px;
+    }
+
+    :lang(fr) {
+      font-style: italic;
+      color: purple;
+    }
+
+    /* Pseudo Elements */
+    h1::before {
+      content: "🌟 ";
+    }
+
+    h1::after {
+      content: " ✔";
+    }
+
+    input::placeholder {
+      color: gray;
+      font-style: italic;
+    }
+
+    ::selection {
+      background: yellow;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pseudo Classes, Pseudo Elements & CSS Units</h1>
+
+  <!-- Root and Units -->
+  <h2>1. :root & CSS Units</h2>
+  <div class="units-example">
+    This box uses px, em, %, rem, vh units and variables from :root.
+  </div>
+
+  <!-- Focus and Active -->
+  <h2>2. :focus / :active</h2>
+  <input type="text" placeholder="Focus me"><br><br>
+  <a href="#">Click Me (Active)</a><br><br>
+
+  <!-- First / Last Child -->
+  <h2>3. :first-child / :last-child</h2>
+  <div>
+    <p>First Paragraph</p>
+    <p>Middle Paragraph</p>
+    <p>Last Paragraph</p>
+  </div>
+
+  <!-- nth-child -->
+  <h2>4. :nth-child()</h2>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <!-- Empty, Disabled, Checked -->
+  <h2>5. :empty / :disabled / :checked</h2>
+  <p>This is not empty</p>
+  <p></p>
+  <input type="text" disabled><br><br>
+  <input type="checkbox" id="cb1" checked>
+  <label for="cb1">I am checked</label><br><br>
+
+  <!-- not, target, lang -->
+  <h2>6. :not() / :target / :lang()</h2>
+  <p class="skip">This is skipped (not styled)</p>
+  <p>This will be orange</p>
+  <a href="#section">Go to section</a>
+  <div id="section">This is the target div</div><br>
+  <p lang="fr">Ceci est un texte français.</p>
+
+  <!-- ::before / ::after -->
+  <h2>7. ::before / ::after</h2>
+  <h1>This is a heading</h1>
+
+  <!-- ::placeholder / ::selection -->
+  <h2>8. ::placeholder / ::selection</h2>
+  <input type="text" placeholder="Placeholder text"><br><br>
+  <p>Select this text to see ::selection effect.</p>
+
+</body>
+</html>

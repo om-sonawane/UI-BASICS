@@ -1,0 +1,82 @@
+// 1. Declare variables using var, let, and const. Store your name, age, and
+whether you are a student or not. Print them using console.log().
+ // 2. Create
+two variables: one for a string "50" and another for a number 10. Add them
+together and observe the output. Explain why. 
+//3. Declare variables of all data
+types in JavaScript (string, number, boolean, null, undefined, object, array).
+Print their types using typeof. 
+//4 . Create a variable with value "123"
+(string). Convert it into a number using Number() and parseInt() and print both.
+// 5. 
+Take two variables: let x = "20"; let y = 5; // .Perform: // String
+concatenation // Type conversion before addition(Number(x) + y) // Implicit type
+conversion (x * y)
+ // 6. Create two variables: let a = "true"; let b = false;.
+Convert a into boolean and b into string,
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        var name="OM PRAMOS SONAWANE";
+        let age=21;
+        let isStudent=true;
+        console.log(name);  
+        console.log(age);
+        console.log(isStudent);
+
+
+
+        var str="50";
+        var num=10;
+        var result=str+num;
+        console.log(result); 
+       
+
+        var str1="OM PRAMOS SONAWANE";
+        var num1=21;
+        var bool=true;
+        var nul=null;
+        var undef;
+        var obj={name:"OM",age:21};
+        var arr=[1,2,3,4,5];
+
+        console.log(typeof str1);
+        console.log(typeof num1);
+        console.log(typeof bool);
+        console.log(typeof nul);
+        console.log(typeof undef);
+        console.log(typeof obj);
+        console.log(typeof arr);
+
+        var value="123";
+        var numValue=Number(value);
+        var intValue=parseInt(value);
+        console.log(numValue);
+        console.log(intValue);
+
+        let x = "20";
+        let y = 5;
+        console.log(x + y); 
+        console.log(Number(x) + y);
+        console.log(x * y); 
+
+
+        let a = "true";
+        let b = false;
+        let boolA = (a === 'true');
+        let strB = String(b);
+        console.log(boolA);
+        console.log(strB);
+
+    </script>
+    
+</body>
+</html>
