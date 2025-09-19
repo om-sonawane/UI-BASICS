@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <script>
+      //1. createElement + appendChild Task: Create a button that, when clicked, adds a new <li> element with the text "New Item" to an existing <ul>.
+        let button = document.createElement("button");
+        button.textContent = "Add New Item";
+        document.body.appendChild(button);
+        let ul = document.createElement("ul");
+        document.body.appendChild(ul);
+        button.addEventListener("click", function() {
+          let li = document.createElement("li");
+          li.textContent = "New Item";
+          ul.appendChild(li);
+        });
+
+
+      //2. createTextNode + appendChild Task: Create a <div> and add a text node to it using createTextNode. The text should say "Hello, this is a new div."
+      let divv = document.createElement("div");
+      let textnode =document.createTextNode("Hello, this is a new div.");
+      divv.appendChild(textnode);
+     
+
+      //3. insertBefore Task: Create three <p> tags. Insert a new <p> with the text "Inserted Paragraph" before the second paragraph using insertBefore.
+      document.body.appendChild(divv);
+      let para1 = document.createElement("p");
+      para1.textContent = "Paragraph 1";
+      let para2 = document.createElement("p");
+      para2.textContent = "Paragraph 2";
+      let para3 = document.createElement("p");
+      para3.textContent = "Paragraph 3";
+      document.body.appendChild(para1);
+      document.body.appendChild(para2);
+      document.body.appendChild(para3);
+      let newPara = document.createElement("p");
+      newPara.textContent = "Inserted Paragraph";
+      document.body.insertBefore(newPara, para2);
+
+
+      //4. removeChild Task: Add three list items inside a <ul>. Create a button that removes the last list item when clicked using removeChild.
+      let unorderd = document.createElement("ul");
+      let list1 = document.createElement("li");
+      list1.textContent = "List Item 1";
+      let list2 = document.createElement("li");
+      list2.textContent = "List Item 2";
+      let list3 = document.createElement("li");
+      list3.textContent = "List Item 3";
+      unorderd.appendChild(list1);
+      unorderd.appendChild(list2);
+      unorderd.appendChild(list3);
+      document.body.appendChild(unorderd);
+      let removeButton = document.createElement("button");
+      removeButton.textContent = "Remove Last Item";
+      document.body.appendChild(removeButton);
+      removeButton.addEventListener("click", function() {
+        if (unorderd.lastChild) {
+          unorderd.removeChild(unorderd.lastChild);
+        }
+      });
+
+      //5. replaceChild Task: Create a heading <h2> with the text "Old Heading". Replace it with a new <h2> element with the text "New Heading" using replaceChild.
+      let oldHeading = document.createElement("h2");
+      oldHeading.textContent = "Old Heading";
+      document.body.appendChild(oldHeading);
+      let newHeading = document.createElement("h2");
+      newHeading.textContent = "New Heading";
+      document.body.replaceChild(newHeading, oldHeading);
+
+      //6. Combined Task: Mini Editor Task: Create a <div> with three lines of text (using <p>). Provide buttons to:
+      //Add a new line
+      //Insert a line before the second line
+      //Replace the third line with a new one
+      //Remove the first line
+      let editorDiv = document.createElement("div");
+      let line1 = document.createElement("p");
+      line1.textContent = "This is line 1.";
+      let line2 = document.createElement("p");
+      line2.textContent = "This is line 2.";
+      let line3 = document.createElement("p");
+      line3.textContent = "This is line 3.";
+      editorDiv.appendChild(line1);
+      editorDiv.appendChild(line2);
+      editorDiv.appendChild(line3);
+      document.body.appendChild(editorDiv);
+      let addLineButton = document.createElement("button");
+      addLineButton.textContent = "Add New Line";
+      document.body.appendChild(addLineButton);
+      addLineButton.addEventListener("click", function() {
+        let newLine = document.createElement("p");
+        newLine.textContent = "This is a new line.";
+        editorDiv.appendChild(newLine);
+      });
+
+      // 7. Add Element to DOM Create a <ul> with two <li> items. Then, using JavaScript:
+      //Create a new <li> with text "Item 3"
+      //Add it to the end of the <ul> using appendChild.
+
+      let ul1 = document.createElement("ul");
+      let li1 = document.createElement("li");
+      li1.textContent = "Item-3";
+      ul1.appendChild(li1);
+      document.body.appendChild(ul1);
+
+      //8. Insert Element Before Another In a <div> with three paragraphs, insert a new paragraph before the second one using insertBefore.
+      let div = document.createElement("div");
+      let p1 = document.createElement("p");
+      p1.textContent = "Paragraph 1";
+      let p2 = document.createElement("p");
+      p2.textContent = "Paragraph 2";
+      let p3 = document.createElement("p");
+      p3.textContent = "Paragraph 3";
+      div.appendChild(p1);
+      div.appendChild(p2);
+      div.appendChild(p3);
+      document.body.appendChild(div);
+      let newP = document.createElement("p");
+      newP.textContent = "Inserted Paragraph";
+      div.insertBefore(newP, p2);
+
+      //9. Replace a Child Node Create a <div> with one paragraph containing "Old Content". Use replaceChild to change it to a paragraph with "Updated Content"
+      let div1 = document.createElement("div");
+      let oldP = document.createElement("p");
+      oldP.textContent = "Old Content";
+      div1.appendChild(oldP);
+      document.body.appendChild(div1);
+      let newP1 = document.createElement("p");
+      newP1.textContent = "Updated Content";
+      div1.replaceChild(newP1, oldP);
+
+      //10. Remove a Node Create a <ul> with three <li> items. Remove the first <li> using removeChild.
+      let ul2 = document.createElement("ul");
+      let li2 = document.createElement("li");
+      li2.textContent = "Item 1";
+      let li3 = document.createElement("li");
+      li3.textContent = "Item 2";
+      let li4 = document.createElement("li");
+      li4.textContent = "Item 3";
+      ul2.appendChild(li2);
+      ul2.appendChild(li3);
+      ul2.appendChild(li4);
+      document.body.appendChild(ul2);
+      ul2.removeChild(li2);
+
+      //11. Create and Nest Elements Using only JavaScript:
+      //Create a <div>
+      //Inside the div, add an <h3> and a <p> tag
+      //Set the text using createTextNode
+      //Append all elements properly to the body
+      let div2 = document.createElement("div");
+      let h3 = document.createElement("h3");
+      let p4 = document.createElement("p");
+      let h3Text = document.createTextNode("This is a heading");
+      let pText = document.createTextNode("This is a paragraph.");
+      h3.appendChild(h3Text);
+      p4.appendChild(pText);
+      div2.appendChild(h3);
+      div2.appendChild(p4);
+      document.body.appendChild(div2);
+
+      //12. Replace Text Node Only Create a <p> with text "Old Message". Use createTextNode and replaceChild to change the text to "New Message" without creating a new <p> tag.
+      let p5 = document.createElement("p");
+      let oldMessage = document.createTextNode("Old Message");
+      p5.appendChild(oldMessage);
+      document.body.appendChild(p5);
+      let newMessage = document.createTextNode("New Message");
+      p5.replaceChild(newMessage, oldMessage);
+      //13 .Insert Element Between Two Existing Ones If you have three <div> elements (div1, div2, div3), insert a new <div> with the text "Inserted Div" between div1 and div2.
+      let div3 = document.createElement("div");
+      div3.textContent = "Div 1";
+      let div4 = document.createElement("div");
+      div4.textContent = "Div 2";
+      let div5 = document.createElement("div");
+      div5.textContent = "Div 3";
+      document.body.appendChild(div3);
+      document.body.appendChild(div4);
+      document.body.appendChild(div5);
+      let insertedDiv = document.createElement("div");
+      insertedDiv.textContent = "Inserted Div";
+      document.body.insertBefore(insertedDiv, div4);
+    </script>
+  </body>
+</html>

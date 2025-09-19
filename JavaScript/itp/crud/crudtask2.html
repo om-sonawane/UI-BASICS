@@ -1,0 +1,39 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        //create 10 button with diffrent colour when a button is clicked it should change the bg color of page to the color of button.
+        let colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink", "brown", "grey", "black"];
+        colors.forEach(color => {
+            let button = document.createElement("button");
+            button.textContent = color;
+            button.style.backgroundColor = color;
+            button.style.color = "white";
+            document.body.appendChild(button);
+            button.addEventListener("click", function() {
+                document.body.style.backgroundColor = color;
+            });
+        });
+        
+       // create a youtube subscribe button and when clicked it should say subscribed and change the color
+
+        let youtube=document.createElement("button");
+        youtube.textContent="Subscribe";
+        youtube.style.backgroundColor="red";
+        youtube.style.color="white";
+        document.body.appendChild(youtube);
+        youtube.addEventListener("click",function(){
+            youtube.textContent="Subscribed";
+            youtube.style.backgroundColor="grey";
+        });
+
+    </script>
+  </body>
+  </html>  
+  </body
