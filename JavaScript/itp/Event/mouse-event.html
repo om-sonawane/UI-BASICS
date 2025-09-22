@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+    <style></style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, doloremque
+      minima aperiam maiores quas quos nostrum totam ipsum ea optio suscipit
+      ratione voluptas at, odio officia quibusdam. Quia, natus alias?
+    </p>
+
+
+    <button id="btn1">click</button><br /><br />
+
+    <br />
+    <hr />
+
+    <button id="btn2">doubleClick</button>
+    <br />
+    <hr />
+    <section
+      style="height: 200px; width: 200px; border: 1px solid red"
+    >
+    <br />
+    <hr />
+    <div>
+      <span
+        >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
+        architecto labore minus dolor eos saepe totam laudantium delectus itaque
+        est?
+      </span>
+    </div>
+
+    <script>
+      // Task
+      // 1.Change the  color and background color of paragraph after clicking on the button
+      document.getElementById("btn1").addEventListener("click", () => {
+        let para = document.querySelector("p");
+        para.style.color = "white";
+        para.style.backgroundColor = "black";
+      });
+      //2. change the size of div after double clicking on that div itself (use this keyword)
+      document.querySelector("div").addEventListener("dblclick", function () {
+        this.style.width = "200px";
+        this.style.height = "200px";
+      });
+      //3.refer organic india website and create that section using onmouseover and onmouseout /  onmouseenter and onmouseleave
+
+      //4.just print the clienX and clienY of document using mousemove event
+      document.addEventListener("mousemove", (event) => {
+        console.log(event.clientX);
+        console.log(event.clientY);
+      });
+      //5. contextmenu if user right click on document first time then add rainbow colours one by one background color to document
+
+      let Count = 0;
+      document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+        Count++;
+        if (Count == 1) {
+          document.body.style.backgroundColor = "red";
+        } else if (Count == 2) {
+          document.body.style.backgroundColor = "orange";
+        } else if (Count == 3) {
+          document.body.style.backgroundColor = "yellow";
+        } else if (Count == 4) {
+          document.body.style.backgroundColor = "green";
+        } else if (Count == 5) {
+          document.body.style.backgroundColor = "blue";
+        } else if (Count == 6) {
+          document.body.style.backgroundColor = "indigo";
+        } else if (Count == 7) {
+          document.body.style.backgroundColor = "violet";
+        } else if (Count == 8) {
+          window.close();
+        }
+      });
+    </script>
+  </body>
+</html>
