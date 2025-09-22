@@ -39,7 +39,7 @@
 // how to use hooks
 
 // array dependency in useEffect
-
+// why js is async
 // what is redux
 // how to use redux
 // what is thunk middleware
