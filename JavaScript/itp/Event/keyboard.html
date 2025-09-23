@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<input type="text" id="input1" placeholder="no special char">
+
+
+
+
+   <script>
+
+//keydown vs keypress vs keyup
+//keydown is fired when a key is pressed down
+//keypress is fired when a key that produces a character value is pressed down
+//keyup is fired when a key is released
+ 
+//add special character in array and then prevent default in input
+
+ 
+
+document.addEventListener("keydown", (event) => {
+    if(event.ctrlKey && event.key === 's'){
+        event.preventDefault();
+        alert("ctrl+s is pressed");
+    }
+});
+
+document.getElementById("input1").addEventListener("keypress", (event) => {
+    let char = String.fromCharCode(event.which);
+    let specialChars = ['@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}', '[', ']', '|', '\\', ':', ';', '"', "'", '<', '>', ',', '.', '?', '/','~','`'];
+    if(specialChars.includes(char)){
+        event.preventDefault();
+        alert("Special characters are not allowed");
+    }
+});
+
+ 
+
+   </script> 
+</body>
+</html>
