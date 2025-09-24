@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <ul id="students">
+            <li>om</li>
+            <li>purva</li>
+            <li>siddhi</li>
+            <li>manoj</li>
+            <li>bhalchandra</li>
+            <li>sachin</li>
+        </ul>
+    
+</body>
+
+<script>
+    //give the name of the selected student in alert
+    let ul = document.getElementById("students");
+    ul.addEventListener("click", function(e){
+        if(e.target && e.target.nodeName == "LI"){
+            alert(e.target.innerText);
+        }
+    }); 
+</script>
+</html>
