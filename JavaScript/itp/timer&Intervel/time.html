@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let count = 10;
+
+      let inter =setInterval(function(){
+            if (count >= 0) {
+                console.log(count);
+                count--;
+            } else {
+                clearInterval(inter);
+            }
+        }, 1000);
+
+    </Script>
+
+</body>
+</html>

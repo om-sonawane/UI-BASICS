@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Traffic Signal</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .signal-box {
+      width: 120px;
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .light {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .red.active { background: red; }
+    .yellow.active { background: yellow; color: black; }
+    .green.active { background: green; }
+  </style>
+</head>
+<body>
+  <div class="signal-box">
+    <div class="light red" id="red"> </div>
+    <div class="light yellow" id="yellow"> </div>
+    <div class="light green" id="green"> </div>
+    <div id="timer" style="margin-top:10px; font-size:18px; color:#000;"></div>
+  </div>
+
+  <script>
+    const red = document.getElementById('red');
+    const yellow = document.getElementById('yellow');
+    const green = document.getElementById('green');
+    const timerDisplay = document.getElementById('timer');
+
+    let current = 'red';
+    let timeLeft = 5; // seconds for each phase
+
+    function updateLights() {
+      red.classList.remove('active');
+      yellow.classList.remove('active');
+      green.classList.remove('active');
+
+      if (current === 'red') red.classList.add('active');
+      if (current === 'yellow') yellow.classList.add('active');
+      if (current === 'green') green.classList.add('active');
+
+      timerDisplay.textContent = `${current.toUpperCase()} - ${timeLeft}s`;
+    }
+
+    function changeLight() {
+      if (current === 'red') {
+        current = 'green';
+        timeLeft = 5;
+      } else if (current === 'green') {
+        current = 'yellow';
+        timeLeft = 2;
+      } else {
+        current = 'red';
+        timeLeft = 5;
+      }
+      updateLights();
+    }
+
+    setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        changeLight();
+      } else {
+        updateLights();
+      }
+    }, 1000);
+
+    updateLights();
+  </script>
+</body>
+</html>
