@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+creating a form that can store the hardcoded values in local storage
+<form>
+    <h2>Login</h2>
+    
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input type="email" id="username" placeholder="Enter Username" required>
+    </div>
+    
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <i class="fas fa-eye-slash" id="togglePassword"></i>
+    </div>
+    
+    <input type="submit" value="Login">
+  </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+           
+            const hardcodedUsername = 'omkar';
+            const hardcodedPassword = '#@$Omkar123';
+            
+            localStorage.setItem('username', hardcodedUsername);
+            localStorage.setItem('password', hardcodedPassword);
+
+        });
+
+    </script>
+    
+</body>
+</html>
