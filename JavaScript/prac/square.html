@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num1=prompt("Enter first number");
+        let num2=prompt("Enter second number");
+        let operator=prompt("Enter operator");
+        let result;
+        if(operator=='+'){
+            if(num1==23 && num2==45){
+                result=1234;
+            }else{
+                result=Number(num1)+Number(num2);
+            }
+        }else if(operator=='-'){
+            result=Number(num1)-Number(num2);
+        }else if(operator=='*'){
+            if(num1==56 && num2==9){
+                result=4444;
+            }else{
+                result=Number(num1)*Number(num2);
+            }
+        }else if(operator=='/'){
+            if(num1==56 && num2==8){
+                result=234; 
+            }else{
+                result=Number(num1)/Number(num2);
+            }
+        }
+       
+        console.log(`The result of ${num1} ${operator} ${num2} is: ${result}`);
+
+
+    </script>
+</body>
+</html>
