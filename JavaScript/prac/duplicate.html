@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function removeduplicate(arr) {
+        let uniquearr = [...new Set(arr)];
+        return uniquearr;
+      }
+      console.log(removeduplicate([1, 2, 2, 3, 4, 4, 5, 5, 6]));
+
+      function findMax(arr) {
+        return Math.max(...arr);
+      }
+      console.log(findMax([1, 5, 6, 7, 8]));
+
+     function reverseString(str){
+        return str.split('').reverse().join('');
+     }
+     console.log(reverseString('omkar'))
+
+      console.log(reverseString("hello"));
+
+      function sumOfEven(arr){
+        return arr.filter(n=>n%2===0)
+        .reduce((acc,curr)=>acc+curr,0)
+      }
+      console.log(sumOfEven([1,2,3,4,5,6]));
+    </script>
+  </body>
+</html>
