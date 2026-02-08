@@ -1,0 +1,95 @@
+#parent-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.move-img{
+    height: 120px;
+    width: 120px;
+}
+
+
+.move-img:hover{
+    cursor: pointer;
+}
+
+.move-btn{
+    border-radius: 50%;
+    align-items: center;
+    height: 160px;
+    width: 160px;
+}
+
+#autoplay-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#autoplay-btn:hover {
+    background-color: #45a049;
+}
+
+#autoplay-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Styling for moves, result, and scoreboard */
+#moves, #result, #scoreboard {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+#moves {
+    background-color: #e8f4f8;
+    border: 2px solid #00bcd4;
+    color: #01579b;
+}
+
+#moves img {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+}
+
+#result {
+    font-size: 24px;
+    border: 2px solid #ff6b6b;
+    background-color: #ffe0e0;
+    color: #c92a2a;
+    min-height: 30px;
+}
+
+#result:contains("Win") {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+#scoreboard {
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+    color: #856404;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 40px;
+}

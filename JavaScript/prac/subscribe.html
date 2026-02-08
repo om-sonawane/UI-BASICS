@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+    <button id="Btn">Subscribe</button>
+    <script>
+        let button = document.getElementById("Btn");
+
+        button.addEventListener("click", function() {
+            button.style.color = "red";
+            button.textContent = "Subscribed";
+        });
+       
+        button.addEventListener("dblclick", function() {
+            button.style.color = "green";
+            button.textContent = "Subscribe";
+        });
+
+    </script>
+</body>
+</html>

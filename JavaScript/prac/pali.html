@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- let left=0;
+        let str = "arkra";
+        let right= str.length-1;
+        let isPalindrome= true;
+   
+
+        while(left<right){
+            if(str[left]!==str[right]){
+                isPalindrome=false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        console.log(isPalindrome) -->
+    <script>
+   let str="omkar";
+   let frq={};
+
+   for(let i=0; i<str.length; i++){
+    let char = str[i];
+    if(frq[char]){
+        frq[char]++;
+    }
+    else{
+        frq[char]=1;
+    }
+   }
+   console.log(frq);
+
+  
+    </script>
+</body>
+</html>
